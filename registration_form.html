@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Golos+Text:wght@400;600&family=Lobster&family=Poppins:wght@100;400&family=Rubik&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="registration_form.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(type-writer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Golos Text', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+.loginpage {
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 30px 45px;
+    height: 550px;
+    width: 450px;
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.input-box {
+    position: relative;
+    background: transparent;
+    height: 60px;
+    width: 350px;
+    margin: 20px 0 0;
+    padding: 8px 0;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0px;
+    font-size: 1.3em;
+    font-weight: 500;
+    font-weight: bold;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.3em;
+}
+
+.input-box span i {
+    position: absolute;
+    right: 6px;
+    line-height: 25px;
+    font-size: 1.3em;
+}
+
+header {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.accept-terms {
+    margin-top: 6px;
+    font-size: 1.15em;
+}
+
+.submit {
+    border: none;
+    background: #162938;
+    width: 100%;
+    color: #e4eacc;
+    font-size: 1.4em;
+    padding: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    transition: .5s;
+}
+
+.submit:hover {
+    transform: translate(2%, -2%);
+    box-shadow: none;
+}
+
+.register {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.register p a {
+    color: #162938;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.have-account {
+    display: flex;
+    align-items: center;
+    font-size: 1.15em;
+}
+
+.have-account a {
+    text-decoration: none;
+    color: rgb(71, 67, 67);
+    margin: 0 5px;
+}
+
+.input_label_top {
+    top: -15%;
+}
+
+.dob-date-picker {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 2%;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.copyright a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.active {
+    transform: translateY(-110%);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-25px);
+    }
+    100% {
+        transform: translateX(25px);
+    }
+}
+
+.border {
+    position: absolute;
+    width: 350px;
+    border-bottom: 2px solid #000;
+    margin-top: -20px;
+}
+
+.border-err {
+    border-color: rgb(171, 19, 19);
+    animation: shake 0.15s linear 2;
+}
+
+.error-msg {
+    position: absolute;
+    animation: shake .2s linear 1;
+    color: rgb(171, 19, 19);
+    text-shadow: 2px 2px 40px;
+    margin-top: -15px;
+    animation: shake 0.15s linear 2;
+    display: none;
+    margin-bottom: 3px;
+}
+        h4{
+            
+            text-align: center;
+        }
+        h4 a{
+            color: black;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+
+        <div class="loginpage">
+            <div class="register-form">
+                
+                <h4>
+                    <a href="./project">Click here to navigate to project.html</a>
+                </h4>
+
+                <header>Registration</header>
+                <form  id="myForm">
+                    <div class="input-box">
+                        <span><i class="fa-solid fa-user"></i></span>
+                        <input type="text" id="username" required autocomplete="off" class="email">
+                        <label>Username</label>
+                        
+                    
+                    </div>
+            
+                        <span class="border border-un"></span>
+                        <p class="error-msg error-msg-un">Must contain atleast 5 Characters</p> 
+                    
+
+                    <div class="input-box">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" id="email" required autocomplete="off">
+                        <label>Email</label>
+                    </div>
+                    <span class="border border-mail"></span>
+                    <p class="error-msg error-msg-email">Must include @gmail.com</p>
+
+                    <div class="input-box">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <span class="border border-pd"></span>
+                    <p class="error-msg error-msg-pd">Must be atleast 6 length</p>
+
+                    <div class="input-box dob-date">
+                        <span  class="date-picker-icon"><i class="fa-solid fa-calendar"></i></span>
+                        <input type="text" id="myInput" class="DOB" required>
+                        <!-- <input type="date" required> -->
+                        
+                        <label>DOB</label>
+                    </div>
+                    <span class="border border-dob"></span>
+                    <p class="error-msg error-msg-dob">DOB should be after 1990</p>
+
+                    <div class="accept-terms">
+                        <input type="checkbox" class="accept-terms">
+                        <label>Accept terms & conditions</label>
+                    </div>
+
+                    <button type="submit" class="submit">Submit</button>
+
+                    <div class="have-account">
+                        <p>Already have an account?</p>
+                        <a href="#" class="register-login">Login</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            <p>&copy;copyright | <a href="https://www.linkedin.com/in/venkatakousik/"><b>Ganta Venkata Kousik</a></b> | 2023</p>
+        </div>
+    </footer>
+    <script src="registration_form.js">
+    </script>
+</body>
+
+</html>

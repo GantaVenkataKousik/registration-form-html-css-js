@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(type-writer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Golos Text', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+.loginpage {
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 30px 45px;
+    height: 550px;
+    width: 450px;
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.input-box {
+    position: relative;
+    background: transparent;
+    height: 60px;
+    width: 350px;
+    margin: 20px 0 0;
+    padding: 8px 0;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0px;
+    font-size: 1.3em;
+    font-weight: 500;
+    font-weight: bold;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.3em;
+}
+
+.input-box span i {
+    position: absolute;
+    right: 6px;
+    line-height: 25px;
+    font-size: 1.3em;
+}
+
+header {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.accept-terms {
+    margin-top: 6px;
+    font-size: 1.15em;
+}
+
+.submit {
+    border: none;
+    background: #162938;
+    width: 100%;
+    color: #e4eacc;
+    font-size: 1.4em;
+    padding: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    transition: .5s;
+}
+
+.submit:hover {
+    transform: translate(2%, -2%);
+    box-shadow: none;
+}
+
+.register {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.register p a {
+    color: #162938;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.have-account {
+    display: flex;
+    align-items: center;
+    font-size: 1.15em;
+}
+
+.have-account a {
+    text-decoration: none;
+    color: rgb(71, 67, 67);
+    margin: 0 5px;
+}
+
+.input_label_top {
+    top: -15%;
+}
+
+.dob-date-picker {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 2%;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.copyright a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.active {
+    transform: translateY(-110%);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-25px);
+    }
+    100% {
+        transform: translateX(25px);
+    }
+}
+
+.border {
+    position: absolute;
+    width: 350px;
+    border-bottom: 2px solid #000;
+    margin-top: -20px;
+}
+
+.border-err {
+    border-color: rgb(171, 19, 19);
+    animation: shake 0.15s linear 2;
+}
+
+.error-msg {
+    position: absolute;
+    animation: shake .2s linear 1;
+    color: rgb(171, 19, 19);
+    text-shadow: 2px 2px 40px;
+    margin-top: -15px;
+    animation: shake 0.15s linear 2;
+    display: none;
+    margin-bottom: 3px;
+}
